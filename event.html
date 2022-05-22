@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1>Event niye Clickbaji</h1>
+    <button onclick="document.body.style.backgroundColor='green'">Click Me</button>
+
+    <button onclick="makeRed()">Click me: Red</button>
+    <button id="make-orange-button">Click me : orange </button>
+
+    <button id="make-blue-button">Click me :blue</button>
+
+    <button id="make-golden">Click me: golden</button>
+    <button id="make-pink">Click me: pink</button>
+    <button id="make-light-blue">Click me: lightBlue</button>
+
+    <script src="js/event.js"></script>
+    <script>
+        document.getElementById('make-light-blue').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lightblue';
+        })
+
+    </script>
+</body>
+
+</html>
