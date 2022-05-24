@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>event bubble</h2>
+    <section id="section-container">
+        <h3>bubble vai list</h3>
+        <ul id="list-container">
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item" id="secound-item">Dignissimos dicta consectetur perspiciatis nostrum?</li>
+            <li class="item">Distinctio culpa atque suscipit fugit.</li>
+            <li class="item">Perferendis architecto aperiam odio aliquid.</li>
+            <li class="item">Sequi placeat unde alias velit.</li>
+            <li class="item">Quam ratione blanditiis est accusantium.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('secound-item').addEventListener('click', function (event) {
+            console.log('secound item click')
+            //event.stopPropagation();
+            event.stopImmediatePropagation();
+        });
+        document.getElementById('secound-item').addEventListener('click', function (event) {
+            console.log('secound2 item click')
+
+        });
+        document.getElementById('secound-item').addEventListener('click', function (event) {
+            console.log('secound3 item click')
+
+        });
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('ul click')
+        });
+        //section container
+        document.getElementById('section-container').addEventListener('click', function () {
+            console.log('section click')
+        });
+    </script>
+</body>
+
+</html>
